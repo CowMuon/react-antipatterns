@@ -1,39 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Patterns</title>
+    <title>React Antipatterns</title>
     <meta
       name="description"
-      content="React patterns from beginners to advanced developers. Simple examples, short descriptions, and quality advice."
+      content="React antipatterns for beginners to advanced developers. Simple examples, short descriptions, and quality advice about what NOT to do in React. "
       <link
       href="https://fonts.googleapis.com/css?family=Merriweather:300,300i&display=swap"
       rel="stylesheet"
     />
-    <script
+    <!-- script
       src="https://cdn.usefathom.com/script.js"
       data-site="SIDEIHQY"
       defer
-    ></script>
-	<link rel="stylesheet" href="/styles/base.css">
-	<link rel="stylesheet" href="/styles/highlightjs-github.css">
+    ></script -->
+	  <link rel="stylesheet" href="styles/base.css">
+	  <link rel="stylesheet" href="styles/highlightjs-github.css">
   </head>
+
   <body>
-    <div style="max-width: 32em"><h1 id="react-patterns-on-github" tabindex="-1">React Antiatterns <a href="https://github.com/chantastic/reactantipatterns.com" target="_blank" rel="noopener noreferrer" class="external-link">on GitHub</a> <a class="direct-link" href="#react-antipatterns-on-github">#</a></h1>
-<p>Get the latest React antipatterns, tips, and tricks right to your inbox.</p>
-<div style="height: 82px">
-<script async data-uid="b3af526942" src="https://chantastic.ck.page/b3af526942/index.js"></script>
-</div>
-<h2 id="contents" tabindex="-1">Contents <a class="direct-link" href="#contents">#</a></h2>
-<p><div class="table-of-contents"><ul><li><a href="#contents">Contents </a></li><li><a href="#translations">Translations </a></li><li><a href="#element">Element </a></li></ul></div></p>
-<h2 id="translations" tabindex="-1">Translations <a class="direct-link" href="#translations">#</a></h2>
-<p>These translations are not verified and links are not endorsements.</p>
-<p><a href="https://reactpatterns.cn" target="_blank" rel="noopener noreferrer" class="external-link">Chinese</a></p>
-<h2 id="element" tabindex="-1">Element <a class="direct-link" href="#element">#</a></h2>
-<p><a href="https://reactjs.org/docs/glossary.html#elements" target="_blank" rel="noopener noreferrer" class="external-link">Elements</a> are anything inside angle brackets.</p>
-<pre><code class="hljs language-jsx">&lt;div&gt;&lt;/div&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Greeting</span> /&gt;</span></span>
-</code></pre>
+    <div style="max-width: 32em">
+      <h1 id="react-antipatterns-on-github" tabindex="-1">React Antipatterns is <a href="https://github.com/cowmuon/react-antipatterns" target="_blank" rel="noopener noreferrer" class="external-link">on GitHub</a> <a class="direct-link" href="#react-antipatterns-on-github">#</a></h1>
+      <p>Send us a Pull Request to add a React Antipattern that needs to be avoided.</p>
+      <p>And get the latest React Antipatterns, tips, and tricks right to your inbox:</p>
+      <div style="height: 82px">
+        <script async data-uid="b3af526942" src="index.js"></script>
+      </div>
+
+      <h1 tabindex="-1">Contents</h1>
+    <div>
+      <ul>
+        <!-- li><a href="#classcomponents">Not Using Hooks</a></li -->
+        <li><a href="#functional">Not Using Functional Components</a></li>
+        <li><a href="#nesting">Over-Nesting </a></li>
+        <li><a href="#state">Abusing State </a></li>
+        <li><a href="#hoc">Misusing HOCs</a></li>
+        <li><a href="#renderprops">Abusing Render Props</a></li>
+        <li><a href="#propdrilling">Prop Drilling</a></li>
+        <li><a href="#hoc">Over-reliance on Context</a></li>
+        
+        <!-- li><a href="#dependencies">Deoendency Management </a></li>
+        <li><a href="#hoc">No Code Splitting</a></li>
+        <li><a href="#hoc">Uncontrolled Forms </a></li>
+        <li><a href="#hoc">Not Using Hooks </a></li>
+        <li><a href="#hoc">HOCs </a></li>
+        <li><a href="#hoc">HOCs </a></li -->
+      </ul>
+    </div>
+
+    <h2 id="functional" tabindex="-1">Not Using Functional Components
+      <a class="direct-link" href="#classcomponents">#</a></h2>
+    <p>
+      Not using functional components. React has had functional components since version 16.8 released in February 2019, which also introduced hooks enabling you to use only functional components and hooks, and no lifecyle methods in your app. Since February 2019! So why are you still using class components? Functional components can be simpler and easier to understand than class-based components, and they also have better performance.
+    </p>
+    <!-- pre><code class="hljs language-jsx">&lt;div&gt;&lt;/div&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Example?</span> /&gt;</span></span>
+    </code></pre -->
+
+    <h2 id="state" tabindex="-1"> Over-reliance on State
+      <a class="direct-link" href="#state">#</a></h2>
+    <p>
+    Over-Reliance on State is an anti-pattern in React development that occurs when developers use state excessively, leading to unnecessary re-renders and decreased performance. To prevent this, developers should aim to use state only when necessary and rely on props as much as possible and use state for values that need to change dynamically based on user interactions or other events. They should also regularly review their code to reduce the amount of state used and split large components into smaller ones for better manageability.
+    </p>
+    <!--pre><code class="hljs language-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+    }
+    </code></pre-->
+
+    <h2 id="overnesting" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+    <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p>
+
+    <h2 id="hoc" tabindex="-1"> Misusing HOCs
+      <a class="direct-link" href="#hoc">#</a></h2>
+    <p> 
+      HOCs are a way to share common functionality between components by wrapping a component with another component that provides the additional functionality. HOCs can be useful for adding things like authentication or performance optimization to multiple components at once. However, it's important to use HOCs in the appropriate situations. HOCs should be used when you need to share logic that is not related to the component's rendering. When the logic is related to the component's rendering, it's better to use regular component composition. Additionally, Overusing HOCs can lead to a complex component tree which can make the codebase harder to understand and maintain. 
+    </p>  
+
+    <h2 id="state" tabindex="-1"> Abusing Render Props
+      <a class="direct-link" href="#overnesting">#</a></h2>
+    <p>
+      The Render Props pattern is a way for a component to share its state and behavior with other components, by providing a function that another component can use to render its content. It's a way to share component logic and avoid HOCs. However, misusing the Render Props pattern can lead to a complex component tree, making it harder to understand and maintain. To avoid misusing the Render Props pattern, developers should aim to use it only when it's the best solution for the problem at hand. They should also make sure that the component providing the render prop is focused on providing the state and behavior, and not on rendering. If the component providing the render prop is also responsible for rendering, it's a sign that the Render Props pattern may not be the best solution. If the pattern is used correctly, it can be a powerful tool for sharing logic between components, but it should be used with care and consideration.
+    </p>
+
+    <h2 id="renderprops" tabindex="-1"> Abusing Render Props
+      <a class="direct-link" href="#renderprops">#</a></h2>
+    <p>
+      The Render Props pattern is a way for a component to share its state and behavior with other components, by providing a function that another component can use to render its content. It's a way to share component logic and avoid HOCs. However, misusing the Render Props pattern can lead to a complex component tree, making it harder to understand and maintain. To avoid misusing the Render Props pattern, developers should aim to use it only when it's the best solution for the problem at hand. They should also make sure that the component providing the render prop is focused on providing the state and behavior, and not on rendering. If the component providing the render prop is also responsible for rendering, it's a sign that the Render Props pattern may not be the best solution. If the pattern is used correctly, it can be a powerful tool for sharing logic between components, but it should be used with care and consideration.
+    </p>
+
+    <h2 id="propdrilling" tabindex="-1"> Prop Drilling
+      <a class="direct-link" href="#propdrilling">#</a></h2>
+    <p>
+      Prop drilling is an anti-pattern in React where props are passed down through multiple levels of the component tree, in order to make them available to a component deep down in the tree. This can lead to a large number of unnecessary props being passed down the tree, making the component tree harder to understand and manage. It can also lead to components deep in the tree having an unnecessarily large number of props, making them harder to reason about and test. <b>To avoid props drilling, developers should aim to use a technique called lifting state up, which allows state to be managed at the highest level of the component tree that needs access to it, rather than lazily relying on Context API to manage a deeply nested component tree. </b>This allows for a flatter component tree and makes it easier to manage the state and props. Furthermore, developers should aim to keep the component's responsibilities small and focused, this will help to make the codebase more readable and maintainable.
+  </p>
+
+  <h2 id="context" tabindex="-1"> Over Reliance on Context
+    <a class="direct-link" href="#context">#</a></h2>
+  <p>
+    To avoid misusing the Context API, developers should aim to use it only when necessary, for example when a component deep in the component tree needs to access the state. They should also aim to keep the number of context providers to a minimum, to avoid unnecessary re-renders and keep the component tree simple. Additionally, it's important to use the "useContext" hook instead of the "Consumer" component when it is possible, as it's more performant and easier to work with. Developers should also be aware of the context re-renders, that are caused by the context update, they should aim to update the context only when necessary, and they should be careful when using the context with stateful components and consider using the useReducer hook instead of useState when the component is using the context and has a state that needs to be updated.
+  </p>
+
+
+
+    <!-- h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+      <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p>
+
+
+    <h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+      <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p>
+
+
+    <h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+      <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p>
+
+
+    <h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+      <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p>
+
+
+    <h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#overnesting">#</a></h2>
+      <p>
+      Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
+    </p -->
+
+    
+
+
+  </body>
+</html>
