@@ -82,12 +82,6 @@
       HOCs are a way to share common functionality between components by wrapping a component with another component that provides the additional functionality. HOCs can be useful for adding things like authentication or performance optimization to multiple components at once. However, it's important to use HOCs in the appropriate situations. HOCs should be used when you need to share logic that is not related to the component's rendering. When the logic is related to the component's rendering, it's better to use regular component composition. Additionally, Overusing HOCs can lead to a complex component tree which can make the codebase harder to understand and maintain. 
     </p>  
 
-    <h2 id="state" tabindex="-1"> Abusing Render Props
-      <a class="direct-link" href="#overnesting">#</a></h2>
-    <p>
-      The Render Props pattern is a way for a component to share its state and behavior with other components, by providing a function that another component can use to render its content. It's a way to share component logic and avoid HOCs. However, misusing the Render Props pattern can lead to a complex component tree, making it harder to understand and maintain. To avoid misusing the Render Props pattern, developers should aim to use it only when it's the best solution for the problem at hand. They should also make sure that the component providing the render prop is focused on providing the state and behavior, and not on rendering. If the component providing the render prop is also responsible for rendering, it's a sign that the Render Props pattern may not be the best solution. If the pattern is used correctly, it can be a powerful tool for sharing logic between components, but it should be used with care and consideration.
-    </p>
-
     <h2 id="renderprops" tabindex="-1"> Abusing Render Props
       <a class="direct-link" href="#renderprops">#</a></h2>
     <p>
