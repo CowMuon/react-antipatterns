@@ -40,7 +40,7 @@
         <li><a href="#hoc">Misusing HOCs</a></li>
         <li><a href="#renderprops">Abusing Render Props</a></li>
         <li><a href="#propdrilling">Prop Drilling</a></li>
-        <li><a href="#hoc">Over-reliance on Context</a></li>
+        <li><a href="#context">Over-reliance on Context</a></li>
         
         <!-- li><a href="#dependencies">Deoendency Management </a></li>
         <li><a href="#hoc">No Code Splitting</a></li>
@@ -91,7 +91,7 @@
     <h2 id="propdrilling" tabindex="-1"> Prop Drilling
       <a class="direct-link" href="#propdrilling">#</a></h2>
     <p>
-      Prop drilling is an anti-pattern in React where props are passed down through multiple levels of the component tree, in order to make them available to a component deep down in the tree. This can lead to a large number of unnecessary props being passed down the tree, making the component tree harder to understand and manage. It can also lead to components deep in the tree having an unnecessarily large number of props, making them harder to reason about and test. <b>To avoid props drilling, developers should aim to use a technique called lifting state up, which allows state to be managed at the highest level of the component tree that needs access to it, rather than lazily relying on Context API to manage a deeply nested component tree. </b>This allows for a flatter component tree and makes it easier to manage the state and props. Furthermore, developers should aim to keep the component's responsibilities small and focused, this will help to make the codebase more readable and maintainable.
+      Prop drilling is an anti-pattern in React where props are passed down through multiple levels of the component tree, in order to make them available to a component deep down in the tree. This can lead to a large number of unnecessary props being passed down the tree, making the component tree harder to understand and manage. It can also lead to components deep in the tree having an unnecessarily large number of props, making them harder to reason about and test. <b>To avoid prop drilling, developers should aim to use a technique called lifting state up, which allows state to be managed at the highest level of the component tree that needs access to it, rather than lazily relying on Context API to manage a deeply nested component tree. </b>This allows for a flatter component tree and makes it easier to manage the state and props. Furthermore, developers should aim to keep the component's responsibilities small and focused, this will help to make the codebase more readable and maintainable.
   </p>
 
   <h2 id="context" tabindex="-1"> Over Reliance on Context
