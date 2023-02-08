@@ -90,7 +90,13 @@
       Prop drilling is an anti-pattern in React where props are passed down through multiple levels of the component tree, in order to make them available to a component deep down in the tree. This can lead to a large number of unnecessary props being passed down the tree, making the component tree harder to understand and manage. It can also lead to components deep in the tree having an unnecessarily large number of props, making them harder to reason about and test. To avoid prop drilling, developers should aim to use a technique called lifting state up, which allows state to be managed at the highest level of the component tree that needs access to it, rather than lazily relying on Context API to manage a deeply nested component tree. This allows for a flatter component tree and makes it easier to manage the state and props. Furthermore, developers should aim to keep the component's responsibilities small and focused, this will help to make the codebase more readable and maintainable.
   </p>
 
-
+  <h2 id="context" tabindex="-1"> Over Reliance on Context
+    <a class="direct-link" href="#context">#</a></h2>
+  <p>
+    To avoid misusing the Context API, developers should aim to use it only when necessary, for example when a component deep in the component tree needs to access the state. They should also aim to keep the number of context providers to a minimum, to avoid unnecessary re-renders and keep the component tree simple. Additionally, it's important to use the "useContext" hook instead of the "Consumer" component when it is possible, as it's more performant and easier to work with. Developers should also be aware of the context re-renders, that are caused by the context update, they should aim to update the context only when necessary, and they should be careful when using the context with stateful components and consider using the useReducer hook instead of useState when the component is using the context and has a state that needs to be updated.
+  </p>	    
+	    
+	    
   <h2 id="cloneelement" tabindex="-1"> Using cloneElement instead of composition
     <a class="direct-link" href="#context">#</a></h2>
   <p>
