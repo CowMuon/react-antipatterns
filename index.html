@@ -106,6 +106,11 @@
 Instead of using cloneElement, use the composition pattern by creating a new component that renders the original component and passing it the desired props. This creates a new component instance with its own state and lifecycle methods, making the code more predictable and easier to understand. Your team will thank you. 
   </p>
 
+	       <h2 id="allinonecomponent" tabindex="-1"> Putting Everyting in the Component
+      <a class="direct-link" href="#allinonecomponent">#</a></h2>
+      <p>Putting everything in a single component in a React application is a bad idea for a few reasons. Firstly, it can make it difficult to write tests because all aspects of the component's logic, rendering, and state management need to be tested together. Secondly, tightly coupling logic and state to specific components can make them less reusable, which reduces modularity and scalability of the application. Thirdly, it can make the codebase harder to reason about and maintain, as everything is contained within a single, complex component. Finally, if the application is successful and needs to scale, a monolithic component can lead to performance issues and be difficult to maintain. To avoid these problems, it's important to break down code into smaller, more manageable components, each of which handles specific concerns. This approach leads to more maintainable, testable, and scalable code.
+      </p>
+
 
     <h2 id="functional" tabindex="-1">Not Using Functional Components
       <a class="direct-link" href="#classcomponents">#</a></h2>
@@ -116,11 +121,7 @@ Instead of using cloneElement, use the composition pattern by creating a new com
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Example?</span> /&gt;</span></span>
     </code></pre -->
 
-    <h2 id="allinonecomponent" tabindex="-1"> Over-Nesting
-      <a class="direct-link" href="#allinonecomponent">#</a></h2>
-      <p>Putting everything in a single component in a React application is a bad idea for a few reasons. Firstly, it can make it difficult to write tests because all aspects of the component's logic, rendering, and state management need to be tested together. Secondly, tightly coupling logic and state to specific components can make them less reusable, which reduces modularity and scalability of the application. Thirdly, it can make the codebase harder to reason about and maintain, as everything is contained within a single, complex component. Finally, if the application is successful and needs to scale, a monolithic component can lead to performance issues and be difficult to maintain. To avoid these problems, it's important to break down code into smaller, more manageable components, each of which handles specific concerns. This approach leads to more maintainable, testable, and scalable code.
-      </p>
-
+ 
     <!-- h2 id="state" tabindex="-1"> Over-Nesting
       <a class="direct-link" href="#overnesting">#</a></h2>
       <p>
