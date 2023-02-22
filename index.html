@@ -41,7 +41,8 @@
         <li><a href="#renderprops">Abusing Render Props</a></li>
         <li><a href="#propdrilling">Prop Drilling</a></li>
         <li><a href="#context">Over-reliance on Context</a></li>
-	<li><a href="#cloneelement">Using cloneElement instead of composition</a></li>
+	<li><a href="#cloneelement">Using cloneElement instead of Composition</a></li>
+	<li><a href="#allinonecomponent">Putting Everything in the Component</a></li>      
 	<li><a href="#functional">Not Using Functional Components</a></li>
         
         <!-- li><a href="#dependencies">Deoendency Management </a></li>
@@ -115,13 +116,12 @@ Instead of using cloneElement, use the composition pattern by creating a new com
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Example?</span> /&gt;</span></span>
     </code></pre -->
 
-    <!-- h2 id="state" tabindex="-1"> Over-Nesting
-      <a class="direct-link" href="#overnesting">#</a></h2>
-      <p>
-	cloneElement is hooks whenever possible instead of render props/HOCs and other class-components-related patterns    </p>
-
-
     <h2 id="state" tabindex="-1"> Over-Nesting
+      <a class="direct-link" href="#allinonecomponent">#</a></h2>
+      <p>Putting everything in a single component in a React application is a bad idea for a few reasons. Firstly, it can make it difficult to write tests because all aspects of the component's logic, rendering, and state management need to be tested together. Secondly, tightly coupling logic and state to specific components can make them less reusable, which reduces modularity and scalability of the application. Thirdly, it can make the codebase harder to reason about and maintain, as everything is contained within a single, complex component. Finally, if the application is successful and needs to scale, a monolithic component can lead to performance issues and be difficult to maintain. To avoid these problems, it's important to break down code into smaller, more manageable components, each of which handles specific concerns. This approach leads to more maintainable, testable, and scalable code.
+      </p>
+
+    <!-- h2 id="state" tabindex="-1"> Over-Nesting
       <a class="direct-link" href="#overnesting">#</a></h2>
       <p>
       Over-nesting is an anti-pattern that occurs when a developer uses too many nested components, which can make the codebase difficult to understand and manage. When a component is nested inside another component, it can make it hard to track down where the props are coming from and how the component is being rendered. Additionally, too many nested components can lead to bloated and complex code, making it harder to reason about, test, and debug. To avoid over-nesting, a developer should aim to keep the component hierarchy as flat as possible and break down complex components into smaller, more manageable components. They should also consider using a library like "recompose" that can help you lift state up and reduce the number of nested components. Furthermore, the developer should aim to keep the components small and focused on a single task, this will help to make the codebase more readable and maintainable.
